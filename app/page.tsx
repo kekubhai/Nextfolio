@@ -1,65 +1,120 @@
+'use client'
 import Image from "next/image";
 import { socialLinks } from "./config";
+import { motion } from "framer-motion";
 
 export default function Page() {
+  // Variants for staggered animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <section>
-      <a href={socialLinks.twitter} target="_blank">
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <motion.a
+        href={socialLinks.twitter}
+        target="_blank"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
         <Image
           src="/profile.png"
           alt="Profile photo"
-          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
+          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 transition-all duration-500 shadow-md hover:shadow-lg"
           unoptimized
           width={160}
           height={160}
           priority
         />
-      </a>
-      <h1 className="mb-8 text-2xl font-medium">
+      </motion.a>
+      <motion.h1
+        className="mb-8 text-2xl font-medium"
+        variants={itemVariants}
+      >
         Portfolio template!
-      </h1>
-      <div className="prose prose-neutral dark:prose-invert">
-        <p>
+      </motion.h1>
+      <motion.div
+        className="prose prose-neutral dark:prose-invert"
+        variants={containerVariants}
+      >
+        <motion.p variants={itemVariants}>
           A clean, fast, and lightweight portfolio template built with Next.js,
           Vercel, and Tailwind CSS.
-        </p>
-        <p>
+        </motion.p>
+        <motion.p variants={itemVariants}>
           Nextfolio has everything you need for a portfolio: MDX blog, SEO, RSS,
           Atom & JSON feeds, analytics, Tweet & YouTube embeds, KaTeX and {""}
-          <a
+          <motion.a
             target="_blank"
             href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
+            whileHover={{ color: "#3182CE", scale: 1.03 }}
+            transition={{ duration: 0.2 }}
           >
             more
-          </a>
+          </motion.a>
           .
-        </p>
-        <p>
+        </motion.p>
+        <motion.p variants={itemVariants}>
           Nextfolio is{" "}
-          <a href={socialLinks.github} target="_blank">
+          <motion.a
+            href={socialLinks.github}
+            target="_blank"
+            whileHover={{ color: "#3182CE", scale: 1.03 }}
+            transition={{ duration: 0.2 }}
+          >
             open-source
-          </a>{" "}
+          </motion.a>{" "}
           and fully customizable, making it easy to add more features.
-        </p>
-        <p>
-          <a
+        </motion.p>
+        <motion.p variants={itemVariants}>
+          <motion.a
             href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
             target="_blank"
+            whileHover={{ color: "#3182CE", scale: 1.03 }}
+            transition={{ duration: 0.2 }}
           >
             Deploy
-          </a>{" "}
+          </motion.a>{" "}
           your Nextfolio site with Vercel in minutes and follow the set up
           instructions in the{" "}
-          <a href="/blog/getting-started">Getting Started</a> post.
-        </p>
-        <p>
+          <motion.a
+            href="/blog/getting-started"
+            whileHover={{ color: "#3182CE", scale: 1.03 }}
+            transition={{ duration: 0.2 }}
+          >
+            Getting Started
+          </motion.a>{" "}
+          post.
+        </motion.p>
+        <motion.p variants={itemVariants}>
           Built and maintained by{" "}
-          <a href="https://imsirius.xyz/" target="_blank">
+          <motion.a
+            href="https://imsirius.xyz/"
+            target="_blank"
+            whileHover={{ color: "#3182CE", scale: 1.03 }}
+            transition={{ duration: 0.2 }}
+          >
             Sirius
-          </a>
+          </motion.a>
           .
-        </p>
-      </div>
-    </section>
+        </motion.p>
+      </motion.div>
+    </motion.section>
   );
 }
