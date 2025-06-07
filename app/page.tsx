@@ -43,8 +43,9 @@ export default function Page() {
           priority
         />
       </motion.a>
+      <motion.h3 className="font-mono text-5xl p-3 underline"> Know Me</motion.h3>
       <motion.h1
-        className="mb-8 text-2xl font-medium"
+        className="mb-8 text-2xl font-mono m-3"
         variants={itemVariants}
       >
         Hey Man/Woman
@@ -53,11 +54,11 @@ export default function Page() {
         className="prose prose-neutral dark:prose-invert"
         variants={containerVariants}
       >
-        <motion.p variants={itemVariants} className="text-xl font-mono m-3">
-      I build and ship and do it again and again 
+        <motion.p variants={itemVariants} className="text-2xl font-mono m-3">
+      i build and ship and do it again and again 
         </motion.p>
-        <motion.p variants={itemVariants} className="font-mono text-xl m-3">
-        I learn ,compete ,execute and stay humble 
+        <motion.p variants={itemVariants} className="font-mono text-2xl m-3">
+        i learn,compete,execute and stay humble 
           <motion.a
             target="_blank"
             href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
@@ -68,50 +69,20 @@ export default function Page() {
           </motion.a>
           
         </motion.p>
-        <motion.p variants={itemVariants}>
-          Nextfolio is{" "}
+        <motion.p variants={itemVariants} className="font-mono m-3 text-2xl">
+          i watch cinema{" "}
           <motion.a
             href={socialLinks.github}
             target="_blank"
             whileHover={{ color: "#3182CE", scale: 1.03 }}
             transition={{ duration: 0.2 }}
           >
-            open-source
+            make content
           </motion.a>{" "}
-          and fully customizable, making it easy to add more features.
+      and play football
         </motion.p>
-        <motion.p variants={itemVariants}>
-          <motion.a
-            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
-            target="_blank"
-            whileHover={{ color: "#3182CE", scale: 1.03 }}
-            transition={{ duration: 0.2 }}
-          >
-            Deploy
-          </motion.a>{" "}
-          your Nextfolio site with Vercel in minutes and follow the set up
-          instructions in the{" "}
-          <motion.a
-            href="/blog/getting-started"
-            whileHover={{ color: "#3182CE", scale: 1.03 }}
-            transition={{ duration: 0.2 }}
-          >
-            Getting Started
-          </motion.a>{" "}
-          post.
-        </motion.p>
-        <motion.p variants={itemVariants}>
-          Built and maintained by{" "}
-          <motion.a
-            href="https://imsirius.xyz/"
-            target="_blank"
-            whileHover={{ color: "#3182CE", scale: 1.03 }}
-            transition={{ duration: 0.2 }}
-          >
-            Sirius
-          </motion.a>
-          .
-        </motion.p>
+       
+        
       </motion.div>
     </motion.section>
   );

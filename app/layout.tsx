@@ -7,7 +7,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
-
+import SpaceWarpCanvas from "./components/SpaceWarp";
+import ColorGlow from "./components/colorglow";
+//import '../lib/styles.css';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -82,6 +84,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ColorGlow/>
+           <SpaceWarpCanvas/>
           <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[624px] w-full">
             <Navbar />
             {children}

@@ -14,6 +14,7 @@ export function Navbar() {
       <div className="flex flex-col md:flex-row md:items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="text-5xl font-semibold p-3">
+         
            Hi , {metaData.title} here
           </Link>
         </div>
