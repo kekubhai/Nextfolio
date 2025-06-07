@@ -47,28 +47,26 @@ export default function Page() {
         className="mb-8 text-2xl font-medium"
         variants={itemVariants}
       >
-        Portfolio template!
+        Hey Man/Woman
       </motion.h1>
       <motion.div
         className="prose prose-neutral dark:prose-invert"
         variants={containerVariants}
       >
-        <motion.p variants={itemVariants}>
-          A clean, fast, and lightweight portfolio template built with Next.js,
-          Vercel, and Tailwind CSS.
+        <motion.p variants={itemVariants} className="text-xl font-mono m-3">
+      I build and ship and do it again and again 
         </motion.p>
-        <motion.p variants={itemVariants}>
-          Nextfolio has everything you need for a portfolio: MDX blog, SEO, RSS,
-          Atom & JSON feeds, analytics, Tweet & YouTube embeds, KaTeX and {""}
+        <motion.p variants={itemVariants} className="font-mono text-xl m-3">
+        I learn ,compete ,execute and stay humble 
           <motion.a
             target="_blank"
             href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
             whileHover={{ color: "#3182CE", scale: 1.03 }}
             transition={{ duration: 0.2 }}
           >
-            more
+            
           </motion.a>
-          .
+          
         </motion.p>
         <motion.p variants={itemVariants}>
           Nextfolio is{" "}
