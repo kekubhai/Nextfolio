@@ -28,7 +28,7 @@ function SocialLinks() {
       <SocialLink href={socialLinks.github} icon={FaGithub} />
       <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
       <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
-      <SocialLink href={socialLinks.email} icon={TbMailFilled} />
+      <SocialLink href={'https://mail.google.com/mail/?view=cm&fs=1&to=anirbanghosh060@gmail.com&su=Hello&body=Hi%20Anirban,'} icon={TbMailFilled} />
       <a href="/rss.xml" target="_self">
         <FaRss />
       </a>
@@ -38,15 +38,15 @@ function SocialLinks() {
 
 export default function Footer() {
   return (
-    <small className="block lg:mt-24 mt-16 text-[#1C1C1C] dark:text-[#D4D4D4]">
-      <time>© {YEAR}</time>{" "}
+    <small className="block lg:mt-24 mt-16 text-[#0e0d0d] dark:text-[#cec4c4]">
+      <time className="text-black dark:text-[#cec4c4]">© {YEAR}</time>{" "}
       <a
-        className="no-underline"
+        className="underline text-black dark:text-white text-2xl"
         href={socialLinks.twitter}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {metaData.title}
+    Kekubhai
       </a>
       <style jsx>{`
         @media screen and (max-width: 480px) {

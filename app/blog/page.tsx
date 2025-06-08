@@ -1,45 +1,71 @@
-import Link from "next/link";
-import { formatDate, getBlogPosts } from "app/lib/posts";
+'use client'
+import Image from "next/image";
+import { socialLinks } from "app/config";
+import { motion } from "framer-motion";
+import MediumBlogCards from "app/components/MediumBlogCards";
 
-export const metadata = {
-  title: "Blog",
-  description: "Nextfolio Blog",
-};
+export default function Page() {
+  // Variants for staggered animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
 
-export default function BlogPosts() {
-  let allBlogs = getBlogPosts();
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
-    <section>
-      <h1 className="mb-8 text-2xl font-medium">Our Blog</h1>
-      <div>
-        {allBlogs
-          .sort((a, b) => {
-            if (
-              new Date(a.metadata.publishedAt) >
-              new Date(b.metadata.publishedAt)
-            ) {
-              return -1;
-            }
-            return 1;
-          })
-          .map((post) => (
-            <Link
-              key={post.slug}
-              className="flex flex-col space-y-1 mb-5 transition-opacity duration-200 hover:opacity-80"
-              href={`/blog/${post.slug}`}
-            >
-              <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-2">
-                <h2 className="text-black dark:text-white">
-                  {post.metadata.title}
-                </h2>
-                <p className="text-neutral-600 dark:text-neutral-400 tabular-nums text-sm">
-                  {formatDate(post.metadata.publishedAt, false)}
-                </p>
-              </div>
-            </Link>
-          ))}
-      </div>
-    </section>
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <motion.a
+        className="block"
+        href={socialLinks.twitter}
+        target="_blank"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
+        <Image
+          src="/profile.png"
+          alt="Profile photo"
+          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 transition-all duration-500 shadow-md hover:shadow-lg ring-2 ring-primary"
+          unoptimized
+          width={160}
+          height={160}
+          priority
+        />
+      </motion.a>
+      <motion.h3 className="font-mono text-5xl p-3 underline">Know Me</motion.h3>
+      <motion.h1
+        className="mb-8 text-2xl font-mono m-3"
+        variants={itemVariants}
+      >
+        Hey there!
+      </motion.h1>
+      <motion.div
+        className="prose prose-neutral dark:prose-invert"
+        variants={containerVariants}
+      >
+        <motion.p variants={itemVariants} className="text-2xl font-mono m-3">
+          I build and ship and do it again and again 
+        </motion.p>
+        <motion.p variants={itemVariants} className="font-mono text-2xl m-3">
+          I learn, compete, execute and stay humble
+        </motion.p>
+      </motion.div>
+      
+      {/* Add the Medium Blog Cards component */}
+      <MediumBlogCards />
+    </motion.section>
   );
 }
