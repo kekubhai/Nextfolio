@@ -1,40 +1,48 @@
-
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  async rewrites() {
-    return [
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
       {
-        source: "/rss.xml",
-        destination: "/feed/rss.xml",
+        protocol: "https",
+        hostname: "www.assets.pinterest.com",
       },
       {
-        source: "/atom.xml",
-        destination: "/feed/atom.xml",
+        protocol: "https",
+        hostname: "www.pinterest.com",
       },
       {
-        source: "/feed.json",
-        destination: "/feed/feed.json",
+        protocol: "https",
+        hostname: "pbs.twimg.com",
       },
       {
-        source: "/rss",
-        destination: "/feed/rss.xml",
+        protocol: "https",
+        hostname: "cdn.hashnode.com",
       },
       {
-        source: "/feed",
-        destination: "/feed/rss.xml",
+        protocol: "https",
+        hostname: "i.pcmag.com",
       },
       {
-        source: "/atom",
-        destination: "/feed/atom.xml",
+        protocol: "https",
+        hostname: "res.cloudinary.com",
       },
       {
-        source: "/json",
-        destination: "/feed/feed.json",
+        protocol: "https",
+        hostname: "media.licdn.com",
       },
-    ];
+      "miro.medium.com",
+      "dev-to-uploads.s3.amazonaws.com",
+      "avatars.githubusercontent.com",
+      "ik.imagekit.io",
+    ],
   },
-};
+  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+}
 
-export default nextConfig;
+export default nextConfig

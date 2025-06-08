@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 // Define the blog post data structure
 type BlogPost = {
@@ -12,6 +13,9 @@ type BlogPost = {
   source: "Medium" | "Notion";
   image?: string;
 };
+
+// Type for filter options
+type FilterOption = "All" | "Medium" | "Notion";
 
 // Combined data from Medium and Notion
 const blogPosts: BlogPost[] = [
@@ -61,6 +65,9 @@ const blogPosts: BlogPost[] = [
 ];
 
 const MediumBlogCards = () => {
+  // State to track the current filter
+  const [activeFilter, setActiveFilter] = useState<FilterOption>("All");
+  
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -77,6 +84,12 @@ const MediumBlogCards = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+  // Filter the blog posts based on the active filter
+  const filteredPosts = blogPosts.filter(post => {
+    if (activeFilter === "All") return true;
+    return post.source === activeFilter;
+  });
+
   return (
     <section className="my-8">
       <motion.h2 
@@ -88,11 +101,41 @@ const MediumBlogCards = () => {
         Articles & Guides
       </motion.h2>
 
-      {/* Filter buttons */}
+      {/* Filter buttons with click handlers */}
       <div className="flex space-x-4 mb-6">
-        <button className="px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">All</button>
-        <button className="px-3 py-1 rounded-full hover:bg-primary/10 text-foreground/70 font-medium">Medium</button>
-        <button className="px-3 py-1 rounded-full hover:bg-primary/10 text-foreground/70 font-medium">Notion</button>
+        <motion.button 
+          className={`px-3 py-1 rounded-full transition-colors duration-300 font-medium ${
+            activeFilter === "All" 
+              ? "bg-primary/10 text-primary" 
+              : "hover:bg-primary/10 text-foreground/70"
+          }`}
+          onClick={() => setActiveFilter("All")}
+          whileTap={{ scale: 0.95 }}
+        >
+          All
+        </motion.button>
+        <motion.button 
+          className={`px-3 py-1 rounded-full transition-colors duration-300 font-medium ${
+            activeFilter === "Medium" 
+              ? "bg-primary/10 text-primary" 
+              : "hover:bg-primary/10 text-foreground/70"
+          }`}
+          onClick={() => setActiveFilter("Medium")}
+          whileTap={{ scale: 0.95 }}
+        >
+          Medium
+        </motion.button>
+        <motion.button 
+          className={`px-3 py-1 rounded-full transition-colors duration-300 font-medium ${
+            activeFilter === "Notion" 
+              ? "bg-primary/10 text-primary" 
+              : "hover:bg-primary/10 text-foreground/70"
+          }`}
+          onClick={() => setActiveFilter("Notion")}
+          whileTap={{ scale: 0.95 }}
+        >
+          Notion
+        </motion.button>
       </div>
       
       <motion.div 
@@ -100,8 +143,9 @@ const MediumBlogCards = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
+        key={activeFilter} // Re-trigger animation when filter changes
       >
-        {blogPosts.map((post, index) => (
+        {filteredPosts.map((post, index) => (
           <motion.a
             key={index}
             href={post.url}
@@ -138,6 +182,17 @@ const MediumBlogCards = () => {
           </motion.a>
         ))}
       </motion.div>
+      
+      {/* Show message when no posts match the filter */}
+      {filteredPosts.length === 0 && (
+        <motion.div 
+          className="text-center py-12 text-muted-foreground"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          No {activeFilter} articles found.
+        </motion.div>
+      )}
     </section>
   );
 };

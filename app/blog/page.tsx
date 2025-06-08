@@ -27,42 +27,7 @@ export default function Page() {
       animate="visible"
       variants={containerVariants}
     >
-      <motion.a
-        className="block"
-        href={socialLinks.twitter}
-        target="_blank"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-      >
-        <Image
-          src="/profile.png"
-          alt="Profile photo"
-          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 transition-all duration-500 shadow-md hover:shadow-lg ring-2 ring-primary"
-          unoptimized
-          width={160}
-          height={160}
-          priority
-        />
-      </motion.a>
-      <motion.h3 className="font-mono text-5xl p-3 underline">Know Me</motion.h3>
-      <motion.h1
-        className="mb-8 text-2xl font-mono m-3"
-        variants={itemVariants}
-      >
-        Hey there!
-      </motion.h1>
-      <motion.div
-        className="prose prose-neutral dark:prose-invert"
-        variants={containerVariants}
-      >
-        <motion.p variants={itemVariants} className="text-2xl font-mono m-3">
-          I build and ship and do it again and again 
-        </motion.p>
-        <motion.p variants={itemVariants} className="font-mono text-2xl m-3">
-          I learn, compete, execute and stay humble
-        </motion.p>
-      </motion.div>
+     
       
       {/* Add the Medium Blog Cards component */}
       <MediumBlogCards />
