@@ -27,6 +27,7 @@ export default function Page() {
       variants={containerVariants}
     >
       <motion.a
+        className="block"
         href={socialLinks.twitter}
         target="_blank"
         whileHover={{ scale: 1.05 }}
@@ -74,7 +75,8 @@ export default function Page() {
           <motion.a
             href={socialLinks.github}
             target="_blank"
-            whileHover={{ color: "#3182CE", scale: 1.03 }}
+            className="text-primary hover:text-primary/80 font-semibold" // Using theme colors
+            whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2 }}
           >
             make content

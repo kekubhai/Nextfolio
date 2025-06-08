@@ -9,7 +9,7 @@ import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
 import SpaceWarpCanvas from "./components/SpaceWarp";
 import ColorGlow from "./components/colorglow";
-//import '../lib/styles.css';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
