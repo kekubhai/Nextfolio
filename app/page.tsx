@@ -30,6 +30,7 @@ export default function Page() {
         className="block"
         href={socialLinks.twitter}
         target="_blank"
+        
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.98 }}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -73,9 +74,9 @@ export default function Page() {
         <motion.p variants={itemVariants} className="font-mono m-3 text-2xl">
           i watch cinema{" "}
           <motion.a
-            href={socialLinks.github}
+            href={socialLinks.instagram}
             target="_blank"
-            className="text-primary hover:text-primary/80 font-semibold" // Using theme colors
+            className="text-green-500 hover:text-primary/80 font-bold bg-black " // Using theme colors
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2 }}
           >
