@@ -90,4 +90,40 @@ export const projects: Project[] = [
     techStack: ["Expo", "React-Native", "NativeWind", "TypeScript", "Neondb", "Nodejs", "Express"],
     category: "mobile"
   },
+  {
+    title: "AutoNode",
+    year: 2025,
+    description: "No-code automation platform to automate tasks and media activities on Drive, Discord, Slack and Notion.",
+    url: "https://github.com/kekubhai/autonode",
+    image: "/autonode.png",
+    techStack: ["TypeScript", "Automation", "Ngrok", "Twilio", "Bun", "Prisma"],
+    category: "other"
+  },
+  {
+    title: "Lessgo",
+    year: 2025,
+    description: "Tool to receive hiring notifications from Telegram, LinkedIn and X (developer-based) onto your WhatsApp number.",
+    url: "https://github.com/kekubhai/lessgo",
+    image: "https://placehold.co/600x400/4CAF50/white?text=Lessgo",
+    techStack: ["Python", "Selenium", "Pandas", "AsyncIO", "PyWhatKit"],
+    category: "other"
+  },
+  {
+    title: "Data-Forage",
+    year: 2025,
+    description: "Data analysis and extraction tool for processing and organizing large datasets.",
+    url: "https://github.com/kekubhai/Data-Forage",
+    image: "https://placehold.co/600x400/2196F3/white?text=Data-Forage",
+    techStack: ["Python", "Data Analysis", "Pandas", "Visualization"],
+    category: "other"
+  },
+  {
+    title: "Go-Server",
+    year: 2025,
+    description: "Lightweight and efficient backend server implementation using Go with API endpoints.",
+    url: "https://github.com/kekubhai/go-server",
+    image: "https://placehold.co/600x400/00ADD8/white?text=Go-Server",
+    techStack: ["Go", "API", "Backend", "Server"],
+    category: "other"
+  }
 ]
