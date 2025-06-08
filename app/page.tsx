@@ -36,7 +36,7 @@ export default function Page() {
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
       >
         <Image
-          src="/profile.png"
+          src="/newpfp1.png"
           alt="Profile photo"
           className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 transition-all duration-500 shadow-md hover:shadow-lg"
           unoptimized
@@ -63,7 +63,7 @@ export default function Page() {
         i learn,compete,execute and stay humble 
           <motion.a
             target="_blank"
-            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
+            href="https://github.com/kekubhai"
             whileHover={{ color: "#3182CE", scale: 1.03 }}
             transition={{ duration: 0.2 }}
           >
