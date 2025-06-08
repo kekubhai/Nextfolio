@@ -104,7 +104,7 @@ export const projects: Project[] = [
     year: 2025,
     description: "Tool to receive hiring notifications from Telegram, LinkedIn and X (developer-based) onto your WhatsApp number.",
     url: "https://github.com/kekubhai/lessgo",
-    image: "https://placehold.co/600x400/4CAF50/white?text=Lessgo",
+    image: "/lessgo.png",
     techStack: ["Python", "Selenium", "Pandas", "AsyncIO", "PyWhatKit"],
     category: "other"
   },
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     year: 2025,
     description: "Data analysis and extraction tool for processing and organizing large datasets.",
     url: "https://github.com/kekubhai/Data-Forage",
-    image: "https://placehold.co/600x400/2196F3/white?text=Data-Forage",
+    image: "/dataforage.png",
     techStack: ["Python", "Data Analysis", "Pandas", "Visualization"],
     category: "other"
   },
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     year: 2025,
     description: "Lightweight and efficient backend server implementation using Go with API endpoints.",
     url: "https://github.com/kekubhai/go-server",
-    image: "https://placehold.co/600x400/00ADD8/white?text=Go-Server",
+    image: "/calibrate.png",
     techStack: ["Go", "API", "Backend", "Server"],
     category: "other"
   }
