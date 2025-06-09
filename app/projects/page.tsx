@@ -29,7 +29,7 @@ export default function ProjectsPage() {
   // Filter projects based on active category
   const filteredProjects = projects.filter(project => {
     if (activeFilter === "all") return true;
-    return project.category === activeFilter;
+    return project.category.includes(activeFilter as any);
   });
 
   return (
