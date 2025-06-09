@@ -5,7 +5,7 @@ export interface Project {
   url: string;
   image?: string;
   techStack: string[];
-  category: "blockchain" | "ai" | "web" | "mobile" | "other";
+  category: ("blockchain" | "ai" | "web" | "mobile" | "other")[];
 }
 
 export const projects: Project[] = [
@@ -16,7 +16,7 @@ export const projects: Project[] = [
     url: "https://medic-track.vercel.app/",
     image:'/medictrack.png',
     techStack: ["React", "Next.js", "Blockchain", "TypeScript", "Tailwind CSS"],
-    category: "mobile"
+    category: ["mobile"]
   },
   {
     title: "Orbit-X",
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     url: "https://orbitx-ecru.vercel.app/",
     image:'/orbitx.png',
     techStack: ["React", "Next.js", "Blockchain", "TypeScript", "Tailwind CSS"],
-    category: "blockchain"
+    category: ["blockchain"]
   },
   {
     title: "Calibrate-01",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     url: "https://github.com/kekubhai/calibrate-o1",
     image: "https://ik.imagekit.io/4q9e0khee/ChatGPT%20Image%20Apr%2027,%202025,%2011_39_57%20AM.png?updatedAt=1745734348514",
     techStack: ["React Native", "Golang", "WebSocket", "Expo", "Trading API"],
-    category: "mobile"
+    category: ["mobile"]
   },
   {
     title: "Agent-01",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     url: "https://github.com/kekubhai/agents1",
     image: "https://ik.imagekit.io/4q9e0khee/ChatGPT%20Image%20Apr%2027,%202025,%2012_13_10%20PM.png?updatedAt=1745736226745",
     techStack: ["React", "Next.js", "Puppeteer", "Web Scraping", "Node.js"],
-    category: "web"
+    category: ["ai", "other"]
   },
   {
     title: "LinkRoom",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     url: "https://linkroom-livid.vercel.app/",
     image: "/linkroom.png",
     techStack: ["Next.js", "React", "Solana", "Blockchain", "Tailwind CSS"],
-    category: "blockchain"
+    category: ["blockchain"]
   },
   {
     title: "Kakshya-Kul",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     url: "https://kakshya-kul.vercel.app/",
     image: "/kakshyakul.png",
     techStack: ["React", "Next.js", "AI", "Educational API", "Tailwind CSS"],
-    category: "ai"
+    category: ["ai"]
   },
   {
     title: "Her-Birthday25",
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     url: "https://her-birthday25.vercel.app/",
     image: "/herbirthday.png",
     techStack: ["React", "Next.js", "Animation", "CSS", "Love"],
-    category: "web"
+    category: ["web"]
   },
   {
     title: "Green-Lens AI",
@@ -79,8 +79,8 @@ export const projects: Project[] = [
     url: "https://github.com/kekubhai/greenlens-ai",
     image: "/greenlensai.png",
     techStack: ["React", "Next.js", "Computer Vision", "TensorFlow", "Plant Database"],
-    category: "ai"
-  }, 
+    category: ["ai"]
+  },
   {
     title: "DuoShop",
     year: 2023,
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     url: "https://github.com/kekubhai/duoshop",
     image:'/duoshop.jpg',
     techStack: ["Expo", "React-Native", "NativeWind", "TypeScript", "Neondb", "Nodejs", "Express"],
-    category: "mobile"
+    category: ["mobile"]
   },
   {
     title: "AutoNode",
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     url: "https://github.com/kekubhai/autonode",
     image: "/autonode.png",
     techStack: ["TypeScript", "Automation", "Ngrok", "Twilio", "Bun", "Prisma"],
-    category: "other"
+    category: ["other", "web"]
   },
   {
     title: "Lessgo",
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     url: "https://github.com/kekubhai/lessgo",
     image: "/lessgo.png",
     techStack: ["Python", "Selenium", "Pandas", "AsyncIO", "PyWhatKit"],
-    category: "other"
+    category: ["other"]
   },
   {
     title: "Data-Forage",
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     url: "https://github.com/kekubhai/Data-Forage",
     image: "/dataforage.png",
     techStack: ["Python", "Data Analysis", "Pandas", "Visualization"],
-    category: "other"
+    category: ["other", "ai"]
   },
   {
     title: "Go-Server",
@@ -124,6 +124,6 @@ export const projects: Project[] = [
     url: "https://github.com/kekubhai/go-server",
     image: "/calibrate.png",
     techStack: ["Go", "API", "Backend", "Server"],
-    category: "other"
+    category: ["other"]
   }
 ]

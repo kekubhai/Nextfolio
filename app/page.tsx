@@ -25,67 +25,90 @@ export default function Page() {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
+      className="max-w-full"
     >
-      <motion.a
-        className="block"
-        href={socialLinks.twitter}
-        target="_blank"
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8">
+        <motion.a
+          className="block shrink-0"
+          href={socialLinks.twitter}
+          target="_blank"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
+        >
+          <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 overflow-hidden rounded-full ring-2 ring-primary/40">
+            <Image
+              src="/newpfp1.png"
+              alt="Profile photo"
+              className="grayscale hover:grayscale-0 transition-all duration-500 object-cover"
+              fill
+              sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
+              priority
+            />
+          </div>
+        </motion.a>
         
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-      >
-        <Image
-          src="/newpfp1.png"
-          alt="Profile photo"
-          className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 transition-all duration-500 shadow-md hover:shadow-lg"
-          unoptimized
-          width={160}
-          height={160}
-          priority
-        />
-      </motion.a>
-      <motion.h3 className="font-mono text-5xl p-3 underline"> Know Me</motion.h3>
-      <motion.h1
-        className="mb-8 text-2xl font-mono m-3"
-        variants={itemVariants}
-      >
-        Hey Man/Woman
-      </motion.h1>
+        <div className="text-center md:text-left">
+          <motion.h3 className="font-mono text-3xl md:text-4xl lg:text-5xl mb-2 underline">
+            Know Me
+          </motion.h3>
+          <motion.h1
+            className="text-xl md:text-2xl font-mono mb-2"
+            variants={itemVariants}
+          >
+            Hey there! I'm Anirban
+          </motion.h1>
+          <motion.div 
+            className="flex items-center gap-2 mb-4 justify-center md:justify-start"
+            variants={itemVariants}
+          >
+            <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+              CEO & Founder
+            </span>
+            <a 
+              href="https://zynvo.social" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-lg font-bold hover:text-primary transition-colors"
+            >
+              zynvo.social
+            </a>
+          </motion.div>
+        </div>
+      </div>
+
       <motion.div
-        className="prose prose-neutral dark:prose-invert"
+        className="prose prose-neutral dark:prose-invert max-w-full"
         variants={containerVariants}
       >
-        <motion.p variants={itemVariants} className="text-2xl font-mono m-3">
-      i build and ship and do it again and again 
+        <motion.p variants={itemVariants} className="text-lg md:text-xl lg:text-2xl font-mono mb-4">
+          I build and ship and do it again and again 
         </motion.p>
-        <motion.p variants={itemVariants} className="font-mono text-2xl m-3">
-        i learn,compete,execute and stay humble 
+        
+        <motion.p variants={itemVariants} className="text-lg md:text-xl lg:text-2xl font-mono mb-4">
+          I learn, compete, execute and stay humble 
           <motion.a
             target="_blank"
             href="https://github.com/kekubhai"
             whileHover={{ color: "#3182CE", scale: 1.03 }}
             transition={{ duration: 0.2 }}
           >
-            
           </motion.a>
-          
         </motion.p>
-        <motion.p variants={itemVariants} className="font-mono m-3 text-2xl">
-          i watch cinema{" "}
+        
+        <motion.p variants={itemVariants} className="text-lg md:text-xl lg:text-2xl font-mono mb-4">
+          I watch cinema{" "}
           <motion.a
             href={socialLinks.instagram}
             target="_blank"
-            className="text-green-500 hover:text-primary/80 font-bold bg-black " // Using theme colors
+            className="px-2 py-1 text-green-500 hover:text-primary/80 font-bold bg-black rounded" 
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2 }}
           >
             make content
           </motion.a>{" "}
-      and play football
+          and play football
         </motion.p>
-       
-        
       </motion.div>
     </motion.section>
   );
