@@ -125,5 +125,31 @@ export const projects: Project[] = [
     image: "/calibrate.png",
     techStack: ["Go", "API", "Backend", "Server"],
     category: ["other"]
-  }
+  },
+  {
+    title: "YNOTNOW",
+    year: 2025,
+    description: "YNOTNOW is an idea validation platform with community support, featuring likes and comments to help users validate and discuss their startup or project ideas.",
+    url: "https://ynotnow.pro/",
+    image: "/ynotnow.png",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Community"],
+    category: ["web"]
+  },
+  {
+    title: "Zentry",
+    year: 2025,
+    description: "AI-based expense tracker and budget builder mobile app. Built with React Native, it leverages PyTorch for AI, Express/Node.js for backend, MongoDB and Prisma for data, and Clerk for authentication.",
+    url: "https://github.com/debonir-projects/Zentry",
+    image: "/zentry.png", // Place your Zentry app image in the public folder as zentry.png
+    techStack: [
+      "React Native",
+      "PyTorch",
+      "Express",
+      "Node.js",
+      "MongoDB",
+      "Prisma",
+      "Clerk"
+    ],
+    category: ["mobile", "ai"]
+  },
 ]
