@@ -152,4 +152,31 @@ export const projects: Project[] = [
     ],
     category: ["mobile", "ai"]
   },
+  {
+    title: "AceprepAI",
+    year: 2025,
+    description: "AceprepAI is an AI-powered web platform designed to help students prepare for competitive exams with personalized quizzes, instant feedback, and community-driven resources.",
+    url: "https://github.com/kekubhai/AceprepAI",
+    image: "/aceprepai.png", // Add an image named aceprepai.png to your public folder for best results
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB", "OpenAI API", "AI"],
+    category: ["ai", "web"]
+  },
+  {
+    title: "Faultiz",
+    year: 2025,
+    description: "Faultiz is a machine learning platform for fault detection and predictive maintenance, leveraging advanced ML models to identify anomalies and prevent failures in industrial systems.",
+    url: "https://github.com/kekubhai/Faultiz",
+    image: "/Faultiz.png", // Add an image named Faultiz.png to your public folder for best results
+    techStack: ["Python", "Machine Learning", "Scikit-learn", "Pandas", "NumPy", "Flask", "AI"],
+    category: ["ai"]
+  },
+  {
+    title: "IMDA",
+    year: 2025,
+    description: "IMDA (Intelligent Medical Data Analysis) is a machine learning platform for analyzing and predicting medical data trends, enabling smarter healthcare decisions with advanced ML models and data visualization.",
+    url: "https://github.com/kekubhai/IMDA",
+    image: "/imda.png", // Add an image named imda.png to your public folder for best results
+    techStack: ["Python", "Machine Learning", "Pandas", "NumPy", "Matplotlib", "Scikit-learn", "AI", "Healthcare"],
+    category: ["ai"]
+  },
 ]
