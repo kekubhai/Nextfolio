@@ -20,6 +20,25 @@ export default function Page() {
     visible: { opacity: 1, y: 0 },
   };
 
+  // Experience data
+  const experiences = [
+    {
+      role: "Technical Intern",
+      company: "TechKareer",
+      duration: "Jul 2025 - Present · 1 mo",
+      location: "Remote",
+      logo: "/tk_logo.png", // Add this logo to your public folder
+    },
+    
+    {
+      role: "Software Developer",
+      company: "Ayuruj India",
+      duration: "Feb 2025 - Jun 2025 · 5 mos",
+      location: "Remote · Part-time",
+      logo: "/ayuruj_logo.png", // Add this logo to your public folder
+    },
+  ];
+
   return (
     <motion.section
       initial="hidden"
@@ -110,6 +129,23 @@ export default function Page() {
           and play football
         </motion.p>
       </motion.div>
+
+      {/* Experience Section */}
+      <section className="my-12">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 font-mono underline">Experience</h2>
+        <div className="flex flex-col gap-8">
+          {experiences.map((exp, idx) => (
+            <div key={idx} className="flex flex-col md:flex-row items-start gap-4 bg-white/10 dark:bg-black/20 rounded-2xl p-8 shadow-md">
+              <div>
+                <div className="font-extrabold text-xl md:text-2xl mb-1">{exp.role}</div>
+                <div className="font-bold text-lg md:text-xl text-primary font-mono mb-1">{exp.company}</div>
+                <div className="font-semibold text-base text-muted-foreground mb-1">{exp.duration}</div>
+                <div className="font-semibold text-base text-muted-foreground">{exp.location}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </motion.section>
   );
 }
