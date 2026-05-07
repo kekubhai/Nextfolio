@@ -35,23 +35,33 @@ function Code({ children, ...props }) {
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
-function Table({ data }) {
-  let headers = data.headers.map((header, index) => (
+function Table({ data, children, ...props }) {
+  if (!data) {
+    return <table {...props}>{children}</table>;
+  }
+
+  let headers = Array.isArray(data.headers) ? data.headers : [];
+  let rows = Array.isArray(data.rows) ? data.rows : [];
+
+  let headerCells = headers.map((header, index) => (
     <th key={index}>{header}</th>
   ));
-  let rows = data.rows.map((row, index) => (
+  let rowCells = rows.map((row, index) => (
     <tr key={index}>
-      {row.map((cell, cellIndex) => (
+      {(Array.isArray(row) ? row : []).map((cell, cellIndex) => (
         <td key={cellIndex}>{cell}</td>
       ))}
     </tr>
   ));
+
   return (
     <table>
-      <thead>
-        <tr className="text-left">{headers}</tr>
-      </thead>
-      <tbody>{rows}</tbody>
+      {headerCells.length > 0 && (
+        <thead>
+          <tr className="text-left">{headerCells}</tr>
+        </thead>
+      )}
+      <tbody>{rowCells}</tbody>
     </table>
   );
 }

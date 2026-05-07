@@ -1,6 +1,6 @@
 import "./global.css";
+import "@fontsource-variable/mulish";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -9,8 +9,6 @@ import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
 import SpaceWarpCanvas from "./components/SpaceWarp";
 import ColorGlow from "./components/colorglow";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
@@ -56,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.className}`}>
+    <html lang="en">
       <head>
         <link
           rel="alternate"

@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --font-sans: "Mulish Variable";
     --background: 48 30% 96%;
     --foreground: 35 40% 12%;
 
