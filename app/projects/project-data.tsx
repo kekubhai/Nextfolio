@@ -10,6 +10,33 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Zynvo.social",
+    year: 2025,
+    description: "College community platform for students with branch/semester-based feeds, study material uploads, upvoting, events management, and AI chat via Gemini. Integrated face-api.js for attendance and Clerk for authentication.",
+    url: "https://zynvo.social",
+    image: "https://ik.imagekit.io/4q9e0khee/zynvo-social.png?updatedAt=1745734348514",
+    techStack: ["Next.js", "MongoDB", "Gemini API", "Clerk", "face-api.js", "Tailwind CSS"],
+    category: ["web", "ai"]
+  },
+  {
+    title: "Mimic — Personalized AI Avatar",
+    year: 2025,
+    description: "Privacy-first digital identity platform where users train a one-to-one AI avatar through memory-based learning. Avatar continuously evolves through structured memory of opinions, preferences, and behavioral patterns without model retraining.",
+    url: "https://github.com/kekubhai/mimic-ai-avatar",
+    image: "https://ik.imagekit.io/4q9e0khee/mimic-ai-avatar.png?updatedAt=1745734348514",
+    techStack: ["Next.js", "LangChain", "OpenAI", "Supabase", "TypeScript"],
+    category: ["ai"]
+  },
+  {
+    title: "Claimr — Decentralized Bounty Platform",
+    year: 2025,
+    description: "Crypto bounty platform where companies lock rewards in smart contracts, students submit solutions, and an AI agent auto-evaluates and scores submissions for trustless payouts on Ethereum Sepolia.",
+    url: "https://github.com/kekubhai/claimr",
+    image: "https://ik.imagekit.io/4q9e0khee/claimr-bounty.png?updatedAt=1745734348514",
+    techStack: ["Solidity", "Ethereum Sepolia", "Next.js", "FastAPI", "ethers.js"],
+    category: ["blockchain", "ai"]
+  },
+  {
     title:'medic-Track',
     year: 2025,
     description: "A mobile platform for secure and efficient medical record management.",
