@@ -12,11 +12,67 @@ export const projects: Project[] = [
   {
     title: "Zynvo.social",
     year: 2025,
-    description: "College community platform for students with branch/semester-based feeds, study material uploads, upvoting, events management, and AI chat via Gemini. Integrated face-api.js for attendance and Clerk for authentication.",
+    description: "College community platform for students with branch/semester-based feeds, study material uploads, upvoting, events management, and AI chat via Gemini. Built mobile-first for iOS and Android alongside the web experience. Integrated face-api.js for attendance and Clerk for authentication.",
     url: "https://zynvo.social",
     image: "https://ik.imagekit.io/4q9e0khee/zynvo-social.png?updatedAt=1745734348514",
     techStack: ["Next.js", "MongoDB", "Gemini API", "Clerk", "face-api.js", "Tailwind CSS"],
-    category: ["web", "ai"]
+    category: ["web", "ai", "mobile"]
+  },
+  {
+    title: "LOADLINE",
+    year: 2026,
+    description: "Open-source system design simulator: build an architecture from real cloud services (Cloudflare, AWS, GCP), define a workload in user-level terms, and run a deterministic discrete-event simulation under load and failure to see latency, cost, and the actual bottleneck before shipping.",
+    url: "https://github.com/kekubhai/Loadline",
+    techStack: ["Go", "Next.js", "TypeScript", "Discrete-Event Simulation"],
+    category: ["web", "other"]
+  },
+  {
+    title: "Jobber Hopper",
+    year: 2026,
+    description: "AI job-application assistant: a Chrome extension that autofills Greenhouse and Workday applications from one master profile, paired with a Next.js web app for managing that profile and matching it against job posts.",
+    url: "https://github.com/kekubhai/jobber-hopper",
+    techStack: ["Next.js", "Chrome Extension", "TypeScript", "Supabase", "OpenRouter API"],
+    category: ["ai", "web", "other"]
+  },
+  {
+    title: "ReelEdits",
+    year: 2026,
+    description: "Agent-driven video production studio — drop in raw footage, describe the video you want, and a coding agent inspects, plans, edits, renders and validates it using FFmpeg and Remotion underneath.",
+    url: "https://github.com/kekubhai/reeledits",
+    techStack: ["FFmpeg", "Remotion", "Node.js", "TypeScript", "Whisper"],
+    category: ["ai", "other"]
+  },
+  {
+    title: "A2A Protocol — Agent-to-Agent Marketplace",
+    year: 2026,
+    description: "Verification-backed marketplace for AI agents with on-chain reputation, staking, and cross-chain compatibility across EVM chains and Solana, so agents can bid on work and get paid only once it's independently verified.",
+    url: "https://github.com/kekubhai/a2a",
+    techStack: ["Solidity", "Rust", "TypeScript", "Solana", "Wormhole"],
+    category: ["blockchain", "ai"]
+  },
+  {
+    title: "Genvora",
+    year: 2026,
+    description: "AI-powered multi-tenant SaaS platform that audits websites for AI/LLM readiness — crawling and scoring structure, accessibility and structured data, then generating actionable recommendations through Temporal-powered workflows.",
+    url: "https://github.com/kekubhai/genvora",
+    techStack: ["Next.js", "NestJS", "Cloudflare Workers", "Temporal", "PostHog"],
+    category: ["ai", "web"]
+  },
+  {
+    title: "CogniGraph",
+    year: 2026,
+    description: "Autonomous multi-agent RAG system for querying a private document collection entirely offline — a planner, retriever and summarizer agent pipeline built with LangGraph over a local LLM, no cloud calls involved.",
+    url: "https://github.com/kekubhai/cognigraph",
+    techStack: ["Python", "LangGraph", "LangChain", "ChromaDB"],
+    category: ["ai"]
+  },
+  {
+    title: "Flowdren",
+    year: 2026,
+    description: "Solana program for a multi-approver USDC vault — deposits, configurable approval thresholds, and payout execution all enforced on-chain with Anchor, built for teams that need shared control over treasury disbursements.",
+    url: "https://github.com/kekubhai/flowdren",
+    techStack: ["Rust", "Anchor", "Solana", "SPL Token"],
+    category: ["blockchain"]
   },
   {
     title: "Mimic — Personalized AI Avatar",
