@@ -23,6 +23,7 @@ export const projects: Project[] = [
     year: 2026,
     description: "Open-source system design simulator: build an architecture from real cloud services (Cloudflare, AWS, GCP), define a workload in user-level terms, and run a deterministic discrete-event simulation under load and failure to see latency, cost, and the actual bottleneck before shipping.",
     url: "https://github.com/kekubhai/Loadline",
+    image: "/covers/loadline.png",
     techStack: ["Go", "Next.js", "TypeScript", "Discrete-Event Simulation"],
     category: ["web", "other"]
   },
@@ -31,6 +32,7 @@ export const projects: Project[] = [
     year: 2026,
     description: "AI job-application assistant: a Chrome extension that autofills Greenhouse and Workday applications from one master profile, paired with a Next.js web app for managing that profile and matching it against job posts.",
     url: "https://github.com/kekubhai/jobber-hopper",
+    image: "/covers/jobber-hopper.png",
     techStack: ["Next.js", "Chrome Extension", "TypeScript", "Supabase", "OpenRouter API"],
     category: ["ai", "web", "other"]
   },
@@ -39,6 +41,7 @@ export const projects: Project[] = [
     year: 2026,
     description: "Agent-driven video production studio — drop in raw footage, describe the video you want, and a coding agent inspects, plans, edits, renders and validates it using FFmpeg and Remotion underneath.",
     url: "https://github.com/kekubhai/reeledits",
+    image: "/covers/reeledits.png",
     techStack: ["FFmpeg", "Remotion", "Node.js", "TypeScript", "Whisper"],
     category: ["ai", "other"]
   },
@@ -47,6 +50,7 @@ export const projects: Project[] = [
     year: 2026,
     description: "Verification-backed marketplace for AI agents with on-chain reputation, staking, and cross-chain compatibility across EVM chains and Solana, so agents can bid on work and get paid only once it's independently verified.",
     url: "https://github.com/kekubhai/a2a",
+    image: "/covers/a2a-protocol.png",
     techStack: ["Solidity", "Rust", "TypeScript", "Solana", "Wormhole"],
     category: ["blockchain", "ai"]
   },
@@ -55,6 +59,7 @@ export const projects: Project[] = [
     year: 2026,
     description: "AI-powered multi-tenant SaaS platform that audits websites for AI/LLM readiness — crawling and scoring structure, accessibility and structured data, then generating actionable recommendations through Temporal-powered workflows.",
     url: "https://github.com/kekubhai/genvora",
+    image: "/covers/genvora.png",
     techStack: ["Next.js", "NestJS", "Cloudflare Workers", "Temporal", "PostHog"],
     category: ["ai", "web"]
   },
@@ -63,6 +68,7 @@ export const projects: Project[] = [
     year: 2026,
     description: "Autonomous multi-agent RAG system for querying a private document collection entirely offline — a planner, retriever and summarizer agent pipeline built with LangGraph over a local LLM, no cloud calls involved.",
     url: "https://github.com/kekubhai/cognigraph",
+    image: "/covers/cognigraph.png",
     techStack: ["Python", "LangGraph", "LangChain", "ChromaDB"],
     category: ["ai"]
   },
@@ -71,6 +77,7 @@ export const projects: Project[] = [
     year: 2026,
     description: "Solana program for a multi-approver USDC vault — deposits, configurable approval thresholds, and payout execution all enforced on-chain with Anchor, built for teams that need shared control over treasury disbursements.",
     url: "https://github.com/kekubhai/flowdren",
+    image: "/covers/flowdren.png",
     techStack: ["Rust", "Anchor", "Solana", "SPL Token"],
     category: ["blockchain"]
   },
@@ -214,7 +221,7 @@ export const projects: Project[] = [
     year: 2025,
     description: "YNOTNOW is an idea validation platform with community support, featuring likes and comments to help users validate and discuss their startup or project ideas.",
     url: "https://ynotnow.pro/",
-    image: "/ynotnow.png",
+    image: "/covers/ynotnow.png",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "Community"],
     category: ["web"]
   },
@@ -223,7 +230,7 @@ export const projects: Project[] = [
     year: 2025,
     description: "AI-based expense tracker and budget builder mobile app. Built with React Native, it leverages PyTorch for AI, Express/Node.js for backend, MongoDB and Prisma for data, and Clerk for authentication.",
     url: "https://github.com/debonir-projects/Zentry",
-    image: "/zentry.png", // Place your Zentry app image in the public folder as zentry.png
+    image: "/covers/zentry.png",
     techStack: [
       "React Native",
       "PyTorch",

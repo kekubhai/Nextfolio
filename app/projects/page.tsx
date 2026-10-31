@@ -156,7 +156,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
     <div className="relative h-48 w-full group overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-amber-400/30 to-amber-700/30 group-hover:opacity-50 transition-opacity z-10" />
       <Image 
-        src={project.image || '/placeholder-image.jpg'} 
+        src={project.image || '/covers/placeholder.png'}
         alt={project.title}
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
