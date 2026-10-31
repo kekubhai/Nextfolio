@@ -14,7 +14,7 @@ export const projects: Project[] = [
     year: 2025,
     description: "College community platform for students with branch/semester-based feeds, study material uploads, upvoting, events management, and AI chat via Gemini. Built mobile-first for iOS and Android alongside the web experience. Integrated face-api.js for attendance and Clerk for authentication.",
     url: "https://zynvo.social",
-    image: "https://ik.imagekit.io/4q9e0khee/zynvo-social.png?updatedAt=1745734348514",
+    image: "/covers/zynvo-social.png",
     techStack: ["Next.js", "MongoDB", "Gemini API", "Clerk", "face-api.js", "Tailwind CSS"],
     category: ["web", "ai", "mobile"]
   },
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     year: 2025,
     description: "Crypto bounty platform where companies lock rewards in smart contracts, students submit solutions, and an AI agent auto-evaluates and scores submissions for trustless payouts on Ethereum Sepolia.",
     url: "https://github.com/kekubhai/claimr",
-    image: "https://ik.imagekit.io/4q9e0khee/claimr-bounty.png?updatedAt=1745734348514",
+    image: "/covers/claimr.png",
     techStack: ["Solidity", "Ethereum Sepolia", "Next.js", "FastAPI", "ethers.js"],
     category: ["blockchain", "ai"]
   },

@@ -175,6 +175,21 @@ export const contributions: Contribution[] = [
       "Raw errors returned by the Claude API were being shown verbatim in the UI. Added a translation layer so users see a clean, actionable message instead of an internal error string.",
     techStack: ["TypeScript"],
   },
+
+  // --- mcp-use/mcp-use ---
+  {
+    title: "feat(auth): add Convex OAuth provider example and integration",
+    repo: "mcp-use/mcp-use",
+    repoUrl: "https://github.com/mcp-use/mcp-use",
+    prNumber: 2372,
+    prUrl: "https://github.com/mcp-use/mcp-use/pull/2372",
+    status: "merged",
+    summary:
+      "Added a Convex OAuth provider so mcp-use servers can authenticate against a Convex OAuth deployment instead of issuing their own tokens.",
+    details:
+      "Introduced `oauthConvexProvider`, exported as `mcp-use/oauth/convex`, which verifies access-token JWTs against Convex's JWKS endpoint and checks issuer and audience, mapping Convex's `sub` claim to `ctx.auth.user.id` and the client ID claim to `ctx.auth.user.clientId`. Shipped with tests, a runnable example server, provider documentation, and a changeset, then iterated through review — adding a registry entry and removing a hardcoded deployment URL from the example so users configure their own. Closed issue #2299.",
+    techStack: ["TypeScript", "OAuth 2.0", "JWT", "Convex"],
+  },
 ];
 
 export const repoMeta: Record<
@@ -192,5 +207,11 @@ export const repoMeta: Record<
     url: "https://github.com/OrchestratorInc/agent-orchestrator",
     blurb:
       "A desktop + cloud orchestrator for running multiple coding agents (Claude, Devin, Cursor, and more) against real repos.",
+  },
+  "mcp-use/mcp-use": {
+    label: "mcp-use",
+    url: "https://github.com/mcp-use/mcp-use",
+    blurb:
+      "An open-source TypeScript/Python framework for building MCP (Model Context Protocol) clients and servers.",
   },
 };
